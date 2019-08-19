@@ -1,0 +1,19 @@
+Intel Syntax
+* Destination, followed by source
+
+At&t syntax
+
+
+Syscall table:
+https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl
+
+Calling convention:
+AMD64
+The first six integer or pointer arguments are passed in registers RDI, RSI, RDX, RCX, R8, R9 (R10 is used as a static chain pointer in case of nested functions[19]:21), while XMM0, XMM1, XMM2, XMM3, XMM4, XMM5, XMM6 and XMM7 are used for certain floating point arguments.[19]:22 As in the Microsoft x64 calling convention, additional arguments are passed on the stack[19]:22. Integral return values up to 64 bits in size are stored in RAX while values up to 128 bit are stored in RAX and RDX. Floating-point return values are similarly stored in XMM0 and XMM1
+
+Instructions
+movdqa - mov alignd double quadword
+movzx - mov with zero extend
+pcmpeqd - compare packed doublewords for equal
+* pcmpeqd xmm0,xmm0 will make xmm0 all 1s
+
