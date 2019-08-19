@@ -1,0 +1,16 @@
+* Use ifconfig to view network interfaces running
+** Allows you to enable/disable the driver via 'up' and 'down'
+
+See all network interfaces that are currently active
+ifconfig 
+
+See all network interfaces.
+ifconfig -a
+
+wpa_supplicant
+* Your system runs a daemon. I have not figured out where its config is stored. But this what all the gui stuff interacts with
+wpa_supplicant -Dnl80211 -iwlan0 -c/etc/wpa_supplicant.conf -f /tmp/ks_wpa_supplicant.log
+
+dhclient
+* Use this to get an IP after wpa_supplicant. Need to understand this better
+dhclient wlan0
